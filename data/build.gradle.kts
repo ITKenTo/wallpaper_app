@@ -52,4 +52,6 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.gson.converter)
     implementation(libs.scalar.converter)
+
+    implementation(libs.io.coil.compose)
 }

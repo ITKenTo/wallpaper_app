@@ -32,14 +32,15 @@ import com.example.w01_wallpaper.ui.theme.W01_WallpaperTheme
 fun BottomBarScreen(
     onShare: (() -> Unit)? = null,
     onSetWallpaper: (() -> Unit)? = null,
-    onLiked: (() -> Unit)? = null
+    onLiked: (() -> Unit)? = null,
+    modifier: Modifier = Modifier
 ) {
     Row(
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically,
-        modifier = Modifier.fillMaxWidth()
+        modifier = modifier.fillMaxWidth()
     ) {
-        ItemBottom(icon = R.drawable.ic_share, title = "Share")
+        ItemBottom(icon = R.drawable.ic_share, title = "Share", onClick = { onShare?.invoke() })
         Spacer(modifier = Modifier.width(24.dp))
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -50,9 +51,10 @@ fun BottomBarScreen(
                         onSetWallpaper?.invoke()
                     }
                     .background(
-                        Color.Red,
+                        color = Color(0xFFF9F9F9),
                         shape = CircleShape
-                    ).padding(16.dp)
+                    )
+                    .padding(16.dp)
 
             ) {
                 Image(
@@ -77,7 +79,7 @@ fun BottomBarScreen(
             }
         }
         Spacer(modifier = Modifier.width(24.dp))
-        ItemBottom(icon = R.drawable.ic_like, title = "Favorite")
+        ItemBottom(icon = R.drawable.ic_like, title = "Favorite", onClick = { onLiked?.invoke() })
     }
 }
 
