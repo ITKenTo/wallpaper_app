@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">W01_Wallpaper</string>
+    <string name="wallymax">WallyMax</string>
+    <string name="_4k_wallpapers">" - 4K Wallpapers"</string>
+    <string name="find_wallpaper">Find Wallpaper..</string>
+    <string name="image_slider">sss\n</string>
+    <string name="category">Category</string>
+    <string name="view_all">View All</string>
+</resources>
